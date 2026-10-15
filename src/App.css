@@ -1,0 +1,1039 @@
+/* ========================================
+   COMICVAULT
+   MAIN APPLICATION STYLES
+======================================== */
+
+
+/* ========================================
+   APP
+======================================== */
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 20px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  background: rgba(9, 9, 11, 0.82);
+
+  border-bottom: 1px solid #27272a;
+
+  backdrop-filter: blur(16px);
+}
+
+.brand {
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.brand:hover {
+  opacity: 0.75;
+
+  transform: translateY(-1px);
+}
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+}
+
+.nav-links a {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  color: #a1a1aa;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+.nav-links a.active {
+  color: #ffffff;
+}
+
+.nav-links a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: -9px;
+
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+}
+
+.favourite-count {
+  display: inline-flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  min-width: 22px;
+
+  height: 22px;
+
+  margin-left: 7px;
+
+  padding: 0 6px;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  color: #111111;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  position: relative;
+
+  max-width: 900px;
+
+  margin: auto;
+
+  padding: 85px 20px 70px;
+
+  text-align: center;
+
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  top: 10%;
+  left: 50%;
+
+  width: 550px;
+
+  height: 320px;
+
+  transform: translateX(-50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(99, 102, 241, 0.18),
+      transparent 70%
+    );
+
+  filter: blur(25px);
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+.logo {
+  display: inline-block;
+
+  margin-bottom: 24px;
+
+  color: #a1a1aa;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin-bottom: 20px;
+
+  color: #ffffff;
+
+  font-size: clamp(40px, 6vw, 68px);
+
+  line-height: 1.04;
+
+  letter-spacing: -2.5px;
+
+  text-shadow:
+    0 0 35px rgba(255, 255, 255, 0.08);
+}
+
+.hero p:last-child {
+  max-width: 580px;
+
+  margin: auto;
+
+  color: #a1a1aa;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   COMIC COLLECTION
+======================================== */
+
+.comic-section {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 20px;
+}
+
+.section-heading {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 30px;
+
+  margin-bottom: 30px;
+}
+
+.section-heading h2 {
+  margin-bottom: 8px;
+
+  color: #ffffff;
+
+  font-size: 28px;
+
+  line-height: 1.2;
+}
+
+.section-heading p {
+  color: #a1a1aa;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+.collection-description {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+.results-count {
+  padding: 4px 9px;
+
+  border: 1px solid #27272a;
+
+  border-radius: 20px;
+
+  background: #18181b;
+
+  color: #71717a;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+
+/* ========================================
+   COLLECTION CONTROLS
+======================================== */
+
+.collection-controls {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+/* ========================================
+   SEARCH
+======================================== */
+
+.search-box {
+  width: 260px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 11px 14px;
+
+  background: #18181b;
+
+  border: 1px solid #27272a;
+
+  border-radius: 10px;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.search-box:focus-within {
+  border-color: #52525b;
+
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.04);
+}
+
+.search-box span {
+  color: #71717a;
+
+  font-size: 20px;
+
+  line-height: 1;
+}
+
+.search-box input {
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 13px;
+}
+
+.search-box input::placeholder {
+  color: #71717a;
+}
+
+
+/* ========================================
+   GENRE FILTER
+======================================== */
+
+.genre-filter {
+  min-width: 130px;
+
+  padding: 11px 12px;
+
+  border: 1px solid #27272a;
+
+  border-radius: 10px;
+
+  background: #18181b;
+
+  color: #d4d4d8;
+
+  font-size: 13px;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.genre-filter:hover {
+  border-color: #52525b;
+}
+
+.genre-filter:focus {
+  border-color: #52525b;
+}
+
+.genre-filter option {
+  background: #18181b;
+
+  color: #ffffff;
+}
+
+
+/* ========================================
+   CLEAR FILTER
+======================================== */
+
+.clear-filter-btn {
+  padding: 11px 14px;
+
+  border: 1px solid #3f3f46;
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #a1a1aa;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.clear-filter-btn:hover {
+  background: #27272a;
+
+  border-color: #52525b;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+.clear-filter-btn:active {
+  transform: translateY(0);
+}
+
+
+/* ========================================
+   COMIC GRID
+======================================== */
+
+.comic-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 24px;
+}
+
+
+/* ========================================
+   COMIC CARD
+======================================== */
+
+.comic-card {
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #1c1c20,
+      #141416
+    );
+
+  border: 1px solid #27272a;
+
+  border-radius: 18px;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.comic-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #52525b;
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+
+/* ========================================
+   COMIC COVER
+======================================== */
+
+.comic-cover {
+  position: relative;
+
+  height: 360px;
+
+  overflow: hidden;
+
+  background: #27272a;
+}
+
+.comic-cover img {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+.comic-card:hover .comic-cover img {
+  transform: scale(1.06);
+
+  filter: brightness(1.08);
+}
+
+.comic-cover::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0);
+
+  pointer-events: none;
+
+  transition:
+    background 0.4s ease;
+}
+
+.comic-card:hover .comic-cover::after {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+
+/* ========================================
+   HEART BUTTON
+======================================== */
+
+.heart-btn {
+  position: absolute;
+
+  top: 14px;
+
+  right: 14px;
+
+  z-index: 2;
+
+  width: 42px;
+
+  height: 42px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  color: #ffffff;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.heart-btn:hover {
+  transform: scale(1.1);
+}
+
+.heart-btn:active {
+  transform: scale(0.92);
+}
+
+.heart-btn.liked {
+  background: #ffffff;
+
+  color: #111111;
+}
+
+
+/* ========================================
+   COMIC INFO
+======================================== */
+
+.comic-info {
+  padding: 18px;
+}
+
+.comic-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 12px;
+}
+
+.genre-badge {
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  background: #27272a;
+
+  color: #d4d4d8;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.comic-year {
+  color: #71717a;
+
+  font-size: 12px;
+}
+
+.comic-info h2 {
+  margin-bottom: 7px;
+
+  color: #ffffff;
+
+  font-size: 19px;
+
+  line-height: 1.3;
+}
+
+.comic-author {
+  margin-bottom: 16px;
+
+  color: #a1a1aa;
+
+  font-size: 13px;
+}
+
+.comic-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 16px;
+}
+
+.comic-rating {
+  color: #facc15;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.comic-id {
+  color: #71717a;
+
+  font-size: 12px;
+}
+
+
+/* ========================================
+   FAVOURITE BUTTON
+======================================== */
+
+.favourite-btn {
+  width: 100%;
+
+  padding: 11px 14px;
+
+  border: 1px solid #3f3f46;
+
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #e4e4e7;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.favourite-btn:hover {
+  background: #27272a;
+
+  border-color: #52525b;
+
+  transform: translateY(-1px);
+}
+
+.favourite-btn:active {
+  transform: translateY(0);
+}
+
+.favourite-btn.active {
+  background: #ffffff;
+
+  color: #111111;
+
+  border-color: #ffffff;
+}
+
+
+/* ========================================
+   FAVOURITES PAGE
+======================================== */
+
+.favourites-page {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 20px;
+}
+
+
+/* ========================================
+   EMPTY FAVOURITES
+======================================== */
+
+.empty-favourites {
+  min-height: 350px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: #a1a1aa;
+}
+
+.empty-icon {
+  margin-bottom: 15px;
+
+  color: #71717a;
+
+  font-size: 60px;
+
+  animation:
+    floatingHeart 3s ease-in-out infinite;
+}
+
+.empty-favourites h3 {
+  margin-bottom: 8px;
+
+  color: #ffffff;
+
+  font-size: 24px;
+}
+
+.empty-favourites p {
+  color: #a1a1aa;
+
+  font-size: 14px;
+}
+
+
+/* ========================================
+   EXPLORE BUTTON
+======================================== */
+
+.explore-btn {
+  display: inline-block;
+
+  margin-top: 20px;
+
+  padding: 11px 20px;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #111111;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.explore-btn:hover {
+  transform: translateY(-2px);
+
+  opacity: 0.85;
+}
+
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes floatingHeart {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+  .comic-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .comic-cover {
+    height: 340px;
+  }
+}
+
+
+/* ========================================
+   SMALL TABLET
+======================================== */
+
+@media (max-width: 750px) {
+  .navbar {
+    padding: 18px 20px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .hero {
+    padding: 60px 20px 50px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .hero p:last-child {
+    font-size: 15px;
+  }
+
+  .section-heading {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .collection-controls {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .genre-filter {
+    width: 100%;
+  }
+
+  .clear-filter-btn {
+    width: 100%;
+  }
+
+  .comic-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+  }
+
+  .comic-cover {
+    height: 330px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+
+    gap: 16px;
+
+    padding: 18px 15px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .hero {
+    padding: 50px 18px 45px;
+  }
+
+  .logo {
+    margin-bottom: 18px;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+
+    letter-spacing: -1px;
+  }
+
+  .hero p:last-child {
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+  .comic-section,
+  .favourites-page {
+    padding: 18px 15px;
+  }
+
+  .section-heading h2 {
+    font-size: 24px;
+  }
+
+  .collection-description {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .comic-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .comic-cover {
+    height: 430px;
+  }
+}
+
+
+/* ========================================
+   VERY SMALL MOBILE
+======================================== */
+
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .comic-cover {
+    height: 380px;
+  }
+}

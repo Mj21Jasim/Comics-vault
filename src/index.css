@@ -1,0 +1,125 @@
+/* ========================================
+   COMICVAULT - GLOBAL STYLES
+   SOFT CINEMATIC BACKGROUND
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+
+  font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  color: #f4f4f5;
+
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(99, 102, 241, 0.16),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(139, 92, 246, 0.13),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(59, 130, 246, 0.10),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      #08080d 0%,
+      #0c0b13 45%,
+      #10101a 100%
+    );
+
+  background-attachment: fixed;
+
+  overflow-x: hidden;
+}
+
+
+/* ========================================
+   SOFT AMBIENT LIGHT
+======================================== */
+
+body::before {
+  content: "";
+
+  position: fixed;
+
+  top: -180px;
+  left: 50%;
+
+  width: 700px;
+  height: 700px;
+
+  transform: translateX(-50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(129, 140, 248, 0.08),
+      transparent 65%
+    );
+
+  filter: blur(50px);
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+
+/* ========================================
+   SUBTLE BACKGROUND GLOW
+======================================== */
+
+body::after {
+  content: "";
+
+  position: fixed;
+
+  width: 450px;
+  height: 450px;
+
+  right: -180px;
+  bottom: -150px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(168, 85, 247, 0.07),
+      transparent 70%
+    );
+
+  filter: blur(35px);
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+
+/* ========================================
+   TEXT SELECTION
+======================================== */
+
+::selection {
+  background: #ffffff;
+  color: #111111;
+}
